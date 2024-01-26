@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    container_name: my-mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mdproot
+      MYSQL_DATABASE: java
+      #MYSQL_USER: javauser
+      #MYSQL_PASSWORD: javapassword
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql-data:/var/lib/mysql
