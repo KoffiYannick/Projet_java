@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db_data:/var/lib/mysql
+    ports:
+      - 8083:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: bdd_password
+      MYSQL_DATABASE: gestion_salle
+      #MYSQL_USER: user
+      #MYSQL_PASSWORD: bdd_wordpress
